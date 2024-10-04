@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://interview.bigyellowfish.io/api/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

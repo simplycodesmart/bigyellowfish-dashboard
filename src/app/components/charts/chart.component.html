@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <h3>{{ title }}</h3>
+  </mat-card-header>
+  <mat-card-content>
+    <highcharts-chart
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+      style="width: 100%; height: 400px; display: block"
+    >
+    </highcharts-chart>
+  </mat-card-content>
+</mat-card>

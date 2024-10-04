@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -60,12 +61,16 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "./proxy.conf.json",
+            "port": 4200
+          },
           "configurations": {
             "production": {
-              "buildTarget": "bigyellowfish-dashboard:build:production"
+              "buildTarget": "bigyellowfish-dashboard:build:production",
             },
             "development": {
-              "buildTarget": "bigyellowfish-dashboard:build:development"
+              "buildTarget": "bigyellowfish-dashboard:build:development",
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "16653d33-dc1a-473b-ba80-3af5ae1f83f3"
   }
 }

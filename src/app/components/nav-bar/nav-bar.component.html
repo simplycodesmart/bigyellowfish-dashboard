@@ -1,0 +1,23 @@
+<mat-toolbar color="accent mat-elevation-z8 tool-bar-container">
+  <div class="filter-container">
+    <div class="tool-bar">
+      Filters :
+      <div [formGroup]="filters">
+        @if(yearArray && yearArray.length){
+        <mat-form-field appearance="outline">
+          <mat-label>Year</mat-label>
+          <mat-select formControlName="year">
+            @for (year of yearArray; track year) {
+            <mat-option [value]="year">{{ year }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        }
+      </div>
+    </div>
+    <button mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </div>
+</mat-toolbar>

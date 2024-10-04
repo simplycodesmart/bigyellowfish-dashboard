@@ -1,0 +1,17 @@
+.tool-bar-container {
+  .tool-bar {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    .mat-mdc-form-field-bottom-align {
+      display: none;
+    }
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+}

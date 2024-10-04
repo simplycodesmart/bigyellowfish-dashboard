@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global styles */
+@import "./styles/_flexbox.css";
+@import "ngx-toastr/toastr";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: -webkit-linear-gradient(bottom, #eca324cd, #f05b0ad0);
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+}

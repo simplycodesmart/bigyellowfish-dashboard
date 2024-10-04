@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 1em;
+}
+
+.col-6 {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+@media (max-width: 600px) {
+  .col-6 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

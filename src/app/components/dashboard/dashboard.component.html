@@ -1,0 +1,107 @@
+<div>
+  <section class="nav-bar">
+    <app-nav-bar
+      [yearArray]="listOfYear"
+      (filterChange)="onFilterChange($event)"
+    ></app-nav-bar>
+  </section>
+  <section class="dashboard-content">
+    <div class="container">
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="pieChartDataCategoryPercentage"
+          title="Category Sales Percentage"
+          chartType="pie"
+          [suffix]="'%'"
+          [formatter]="'.2f'"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="monthlySalesTrendChart"
+          title="Monthly Sales Trend"
+          chartType="column"
+          [suffix]="''"
+          [formatter]="'.0f'"
+          [xAxisLabel]="'Months'"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="regionWiseSegmentSales"
+          title="Region wise Sales"
+          chartType="column"
+          [suffix]="'%'"
+          [formatter]="'.2f'"
+          [isStacked]="true"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="pofitbyCityChart"
+          title="Top 10 Pofit City"
+          chartType="column"
+          [suffix]="''"
+          [formatter]="'.2f'"
+          [xAxisLabel]="'city'"
+          [yAxisLabel]="'Profit'"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="lossbyCityChart"
+          title="Top 10 Loss City"
+          chartType="column"
+          [suffix]="''"
+          [formatter]="'.2f'"
+          [xAxisLabel]="'city'"
+          [yAxisLabel]="'Profit'"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+
+      <div class="col-6">
+        @defer(when orders && orders.length) {
+        <app-chart
+          [data]="shipData"
+          title="Ship Modes"
+          chartType="pie"
+          [suffix]="''"
+          [formatter]="'.0f'"
+        >
+        </app-chart>
+        } @placeholder (minimum 3000ms) {
+        <ngx-skeleton-loader />
+        }
+      </div>
+    </div>
+  </section>
+</div>
